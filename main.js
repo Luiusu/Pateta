@@ -3,30 +3,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const formMessage = document.getElementById('formMessage');
 
     goofyForm.addEventListener('submit', (event) => {
-        event.preventDefault(); // Impede o envio padrão do formulário
+        event.preventDefault();
 
-        // Limpa mensagens de erro anteriores
         clearErrorMessages();
 
-        // Valida o formulário
         if (validateForm()) {
-            // Se a validação for bem-sucedida, exibe mensagem de sucesso
             formMessage.textContent = 'Mensagem enviada com sucesso! O Pateta agradece o contato.';
-            formMessage.className = 'success'; // Adiciona classe para estilização de sucesso
-            formMessage.classList.remove('hidden'); // Mostra a mensagem
-            goofyForm.reset(); // Limpa o formulário
+            formMessage.className = 'success';
+            formMessage.classList.remove('hidden');
+            goofyForm.reset();
         } else {
-            // Se a validação falhar, exibe mensagem de erro
             formMessage.textContent = 'Por favor, preencha todos os campos corretamente.';
-            formMessage.className = 'error'; // Adiciona classe para estilização de erro
-            formMessage.classList.remove('hidden'); // Mostra a mensagem
+            formMessage.className = 'error';
+            formMessage.classList.remove('hidden');
         }
     });
 
     function validateForm() {
         let isValid = true;
 
-        // Validação do campo Nome
         const nameInput = document.getElementById('name');
         const nameError = document.getElementById('nameError');
         if (nameInput.value.trim() === '') {
@@ -34,10 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
             isValid = false;
         }
 
-        // Validação do campo E-mail
         const emailInput = document.getElementById('email');
         const emailError = document.getElementById('emailError');
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex simples para e-mail
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (emailInput.value.trim() === '') {
             emailError.textContent = 'O e-mail é obrigatório.';
             isValid = false;
@@ -46,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
             isValid = false;
         }
 
-        // Validação do campo Mensagem
         const messageInput = document.getElementById('message');
         const messageError = document.getElementById('messageError');
         if (messageInput.value.trim() === '') {
@@ -61,6 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.error-message').forEach(errorSpan => {
             errorSpan.textContent = '';
         });
-        formMessage.classList.add('hidden'); // Esconde a mensagem do formulário
+        formMessage.classList.add('hidden');
     }
 });
