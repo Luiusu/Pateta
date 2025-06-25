@@ -2,12 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f8ff; /* Azul claro */
+    background-color: #f0f8ff;
     color: #333;
 }
 
 header {
-    background-color: #4682b4; /* Azul aço */
+    background-color: #4682b4;
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -32,7 +32,7 @@ main {
     width: 200px;
     height: auto;
     border-radius: 50%;
-    border: 5px solid #ffd700; /* Dourado */
+    border: 5px solid #ffd700;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
@@ -82,7 +82,7 @@ hr {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    box-sizing: border-box; /* Para incluir o padding e a borda no width */
+    box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -93,7 +93,7 @@ hr {
 }
 
 .form-group .error-message {
-    color: #ff4500; /* Laranja avermelhado */
+    color: #ff4500;
     font-size: 0.9em;
     margin-top: 5px;
     display: block;
@@ -103,7 +103,7 @@ button[type="submit"] {
     display: block;
     width: 100%;
     padding: 12px;
-    background-color: #32cd32; /* Verde limão */
+    background-color: #32cd32;
     color: white;
     border: none;
     border-radius: 5px;
@@ -113,7 +113,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #228b22; /* Verde floresta */
+    background-color: #228b22;
 }
 
 #formMessage {
